@@ -3,11 +3,11 @@
 ```text
 Notebooks/
 ├── 🟦 CMOS/
-│   └── 📁 32NM/
+│   └── 📁 32nm/
 │       └── 📂 NOT/
 │           ├── 📄 01_data_exploration/
 │           └── 📂 MPL_Regressor/
 │               ├── 📈 02_Training_outputs/
-│               └── 📊 results/
+│               └── 📊 03_results/
 └── 🟦 FINFET/
-    └── 📁 7NM/
+    └── 📁 7nm/
