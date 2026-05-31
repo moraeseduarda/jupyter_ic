@@ -1,0 +1,1 @@
+Change folders config, create directory named tech_size (ex: 32nm) and another inside it called name_logic_gate (ex: NOT)
