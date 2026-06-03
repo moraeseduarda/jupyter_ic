@@ -1,0 +1,9 @@
+X Test set loaded: (31943, 7)
+Y Test set loaded: (31943, 3)
+Y tplh Test set loaded: (31943,)
+
+Testing tplh
+R²: 0.9993320239188602
+MLP, RMSE physical: 2.5784124576449423e-13
+MLP, RMSE physical (ps): 0.257841 ps
+MLP, MAPE: 1.2465%

@@ -1,0 +1,9 @@
+X Test set loaded: (31943, 7)
+Y Test set loaded: (31943, 3)
+Y energy Test set loaded: (31943,)
+
+Testing energy
+R²: 0.9983976325430293
+MLP, RMSE physical (J): 1.9824272038638134e-17
+MLP, RMSE physical (fJ): 0.019824 fJ
+MLP, MAPE: 0.7480%
