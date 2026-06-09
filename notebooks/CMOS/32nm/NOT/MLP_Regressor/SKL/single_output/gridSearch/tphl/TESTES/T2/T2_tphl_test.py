@@ -1,6 +1,5 @@
 import sys
-from sklearn.metrics import root_mean_squared_error, mean_squared_error, mean_absolute_percentage_error, r2_score
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import root_mean_squared_error, mean_absolute_percentage_error, r2_score
 import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
@@ -51,10 +50,6 @@ print(f"Y tphl Test set loaded: {y_test['tphl'].shape}")
 print("\nTesting tphl")
 y_pred = tphl_model.predict(X_test)
 
-y_test_scaled = model_scaler_y.transform(y_test[["tphl"]]).flatten()
-y_pred_scaled = model_scaler_y.transform(y_pred.reshape(-1, 1)).flatten()
-
-
 # Testing R² score
 r2 = r2_score(y_test['tphl'], y_pred)
 print(f"R²: {r2}")
@@ -69,20 +64,6 @@ print(f'MLP, RMSE physical: {rmse_physical}')
 print(f'MLP, RMSE physical (ps): {rmse_ps:.6f} ps')
 print(f'MLP, MAPE: {mape * 100:.4f}%')
 
-residuals_scaled = y_test_scaled - y_pred_scaled
-
-plt.figure(figsize=(8, 5))
-plt.scatter(y_pred_scaled, residuals_scaled, alpha=0.1, color='purple')
-plt.axhline(y=0, color='r', linestyle='--')
-plt.title('Residual Plot for tphl MLP Model (Physical Scale)')
-plt.xlabel('Predicted Values')
-plt.ylabel('Residuals / Errors')
-plt.grid(True, alpha=0.3)
-plt.savefig("/home/eduarda/Repos/jupyter_ic/notebooks/CMOS/32nm/NOT/MLP_Regressor/SKL/single_output/gridSearch/tphl/TESTES/T2/residuals_normalized"
-"/residuals.png")
-plt.show()
-plt.close()
-
 residuals = y_test['tphl'] - y_pred
 
 plt.figure(figsize=(8, 5))
@@ -92,8 +73,7 @@ plt.title('Residual Plot for tphl MLP Model (Physical Scale)')
 plt.xlabel('Predicted Values')
 plt.ylabel('Residuals / Errors')
 plt.grid(True, alpha=0.3)
-plt.savefig("/home/eduarda/Repos/jupyter_ic/notebooks/CMOS/32nm/NOT/MLP_Regressor/SKL/single_output/gridSearch/tphl/TESTES/T2/residuals_physical"
-"/residuals.png")
+plt.savefig("/home/eduarda/Repos/jupyter_ic/notebooks/CMOS/32nm/NOT/MLP_Regressor/SKL/single_output/gridSearch/tphl/TESTES/T2/residuals_physical/residuals.png")
 plt.show()
 plt.close()
 

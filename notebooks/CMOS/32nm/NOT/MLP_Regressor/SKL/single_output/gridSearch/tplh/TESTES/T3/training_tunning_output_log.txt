@@ -1,0 +1,10 @@
+Fitting 10 folds for each of 32 candidates, totalling 320 fits
+Best parameters: {'regressor__mlp__activation': 'relu', 'regressor__mlp__alpha': 0.0001, 'regressor__mlp__hidden_layer_sizes': (150, 50), 'regressor__mlp__learning_rate_init': 0.0005, 'regressor__mlp__solver': 'adam'}
+Best score (R²): 0.9993565572900657
+                                               params  mean_test_score  std_test_score  mean_fit_time
+5   {'regressor__mlp__activation': 'relu', 'regres...         0.999357        0.000029      28.561929
+4   {'regressor__mlp__activation': 'relu', 'regres...         0.999319        0.000049      27.906134
+3   {'regressor__mlp__activation': 'relu', 'regres...         0.999316        0.000037      46.263101
+13  {'regressor__mlp__activation': 'relu', 'regres...         0.999303        0.000040      33.067235
+1   {'regressor__mlp__activation': 'relu', 'regres...         0.999277        0.000060      27.459266
+Trained model saved!
